@@ -438,9 +438,17 @@ img {
 
 .section-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.05fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.section-left .section-content {
+  text-align: left;
+}
+
+.section-left .section-decoration {
+  margin-left: 0;
 }
 
 .section-text {
@@ -527,8 +535,8 @@ img {
 /* Fleet Section */
 .fleet-gallery {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
 }
 
 .fleet-item {
@@ -536,15 +544,19 @@ img {
   border-radius: 12px;
   overflow: hidden;
   background: white;
-  padding: 0.3rem;
+  padding: 0.45rem;
   box-shadow: var(--shadow-sm);
 }
 
 .fleet-item img {
   width: 100%;
-  height: 120px;
+  height: clamp(130px, 16vw, 180px);
   object-fit: contain;
   transition: transform 0.5s ease;
+}
+
+.fleet-gallery .floating {
+  animation: none;
 }
 
 .fleet-overlay {
@@ -940,7 +952,8 @@ img {
   }
 
   .section-split {
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .fleet-gallery {
@@ -1043,10 +1056,13 @@ img {
   }
 
   .cards-container,
-  .fleet-gallery,
   .split,
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .section-soft .fleet-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-content {
@@ -1134,7 +1150,7 @@ img {
   }
 
   .fleet-item img {
-    height: 100px;
+    height: 120px;
   }
 
   .contact-info {
