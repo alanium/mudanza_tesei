@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Website: https://www.mudanzastesei.com/
