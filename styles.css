@@ -327,6 +327,84 @@ img {
   margin-bottom: 3rem;
 }
 
+.panel-content-cta {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.panel-content-cta .section-text {
+  margin-bottom: 0;
+}
+
+.cta-stage {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding-top: 1.25rem;
+}
+
+.cta-card {
+  width: min(100%, 440px);
+  background: linear-gradient(135deg, #fffaf4, #fff3e7);
+  border: 1px solid #f0dcc8;
+  border-radius: 16px;
+  padding: 0.95rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.cta-card-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brand-deep);
+  text-align: center;
+}
+
+.panel-cta-actions {
+  margin: 0;
+  gap: 0.75rem;
+}
+
+.panel-cta-actions .btn {
+  min-width: 180px;
+  padding: 1rem 1.35rem;
+  font-size: 1rem;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #1faa5a, #158a45);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(21, 138, 69, 0.26);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(21, 138, 69, 0.34);
+}
+
+.btn-call {
+  background: #fff3e8;
+  color: var(--brand-deep);
+  border: 1px solid #a85a2d;
+  box-shadow: 0 0 0 1px #a85a2d, 0 8px 20px rgba(194, 106, 53, 0.14);
+}
+
+.btn-call:hover {
+  background: #cf7a43;
+  color: #fff3e8;
+  border-color: #fff3e8;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px #fff3e8, 0 14px 28px rgba(194, 106, 53, 0.24);
+}
+
+.btn-call:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(194, 106, 53, 0.18), 0 10px 24px rgba(194, 106, 53, 0.2);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -565,6 +643,10 @@ img {
   margin-bottom: 1.5rem;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.faq-grid .card h3 {
+  font-size: 1.2rem;
 }
 
 .card-link {
@@ -981,6 +1063,16 @@ img {
   margin: 0;
 }
 
+.footer-link {
+  color: var(--brand-deep);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 .footer-decorations {
   margin-top: 0.5rem;
 }
@@ -1169,6 +1261,27 @@ img {
     flex-direction: column;
     align-items: stretch;
     gap: 0.75rem;
+  }
+
+  .cta-stage {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .cta-card {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .panel-cta-actions {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .panel-cta-actions .btn {
+    width: 100%;
+    min-width: 0;
   }
 
   .trust-badges {
