@@ -18,29 +18,25 @@ const totalSlides = carouselSlides.length;
 
 if (carousel && carouselTrack && prevBtn && nextBtn && dots.length > 0) {
   const updateCarousel = () => {
-    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    carouselTrack.style.transform = `translate3d(-${currentSlide * 100}%, 0, 0)`;
     carouselSlides.forEach((slide, index) => {
       slide.classList.toggle("active", index === currentSlide);
+      slide.setAttribute("aria-hidden", String(index !== currentSlide));
     });
     dots.forEach((dot, index) => {
       dot.classList.toggle("active", index === currentSlide);
+      dot.setAttribute("aria-current", String(index === currentSlide));
     });
-    prevBtn.disabled = currentSlide === 0;
-    nextBtn.disabled = currentSlide === totalSlides - 1;
   };
 
   const nextSlide = () => {
-    if (currentSlide < totalSlides - 1) {
-      currentSlide++;
-      updateCarousel();
-    }
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
   };
 
   const prevSlide = () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateCarousel();
-    }
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
   };
 
   const goToSlide = (index) => {
@@ -61,24 +57,26 @@ if (carousel && carouselTrack && prevBtn && nextBtn && dots.length > 0) {
   });
 
   // Auto-play carousel
-  let autoPlayInterval;
+  let autoPlayInterval = null;
   const startAutoPlay = () => {
+    stopAutoPlay();
     autoPlayInterval = setInterval(() => {
-      if (currentSlide < totalSlides - 1) {
-        nextSlide();
-      } else {
-        goToSlide(0);
-      }
+      nextSlide();
     }, 5000);
   };
 
   const stopAutoPlay = () => {
-    clearInterval(autoPlayInterval);
+    if (autoPlayInterval) {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = null;
+    }
   };
 
   if (carousel) {
     carousel.addEventListener("mouseenter", stopAutoPlay);
     carousel.addEventListener("mouseleave", startAutoPlay);
+    carousel.addEventListener("focusin", stopAutoPlay);
+    carousel.addEventListener("focusout", startAutoPlay);
   }
 
   // Initialize carousel
