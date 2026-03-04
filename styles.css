@@ -738,22 +738,21 @@ img {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  background: white;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--line);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  transition: transform 0.3s ease;
 }
 
 .fleet-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(194, 106, 53, 0.3);
 }
 
 .fleet-card img {
   width: 100%;
   height: 350px;
   object-fit: contain;
-  background: white;
+  background: transparent;
   display: block;
 }
 
@@ -1323,7 +1322,7 @@ img {
 
   .fleet-card img {
     height: 280px;
-    background: white;
+    background: transparent;
   }
 
   .fleet-card h3 {
@@ -1595,7 +1594,7 @@ img {
 
   .fleet-card img {
     height: 220px;
-    background: white;
+    background: transparent;
   }
 
   .carousel-nav {
@@ -1688,7 +1687,7 @@ img {
 
   .fleet-card img {
     height: 200px;
-    background: white;
+    background: transparent;
   }
 
   .carousel-nav {
