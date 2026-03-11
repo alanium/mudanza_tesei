@@ -308,41 +308,52 @@
               <div class="carousel-track">
                 <div class="carousel-slide">
                   <div class="fleet-card">
-                    <img src="./assets/image1.png" alt="Camión de mudanzas pequeño" loading="lazy" width="600" height="350" decoding="async" />
+                    <div class="fleet-stage">
+                      <img src="./assets/image1.png" alt="Camión de mudanzas pequeño" loading="lazy" width="600" height="350" decoding="async" />
+                    </div>
                     <div class="fleet-content">
+                      <span class="fleet-kicker">Unidad 01</span>
                       <h3>Camión de mudanzas</h3>
-                      <p>Ideal para mudanzas pequeñas y medianas</p>
-                      <span class="fleet-badge">Capacidad: 3-5 m³</span>
+                      <p>Configuracion agil para traslados residenciales en la zona.</p>
+                      <ul class="fleet-specs">
+                        <li>Capacidad: 3-5 m³</li>
+                        <li>Ideal para: deptos y mudanzas parciales</li>
+                        <li>Cobertura: Villa Tesei y alrededores</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-slide">
                   <div class="fleet-card">
-                    <img src="./assets/image2.png" alt="Furgoneta de carga" loading="lazy" width="600" height="350" decoding="async" />
+                    <div class="fleet-stage">
+                      <img src="./assets/image2.png" alt="Furgoneta de carga" loading="lazy" width="600" height="350" decoding="async" />
+                    </div>
                     <div class="fleet-content">
+                      <span class="fleet-kicker">Unidad 02</span>
                       <h3>Furgoneta de carga</h3>
-                      <p>Perfecta para fletes programados</p>
-                      <span class="fleet-badge">Capacidad: 5-8 m³</span>
+                      <p>Versatil para entregas puntuales y recorridos de corta distancia.</p>
+                      <ul class="fleet-specs">
+                        <li>Capacidad: 5-8 m³</li>
+                        <li>Ideal para: fletes por franja horaria</li>
+                        <li>Cobertura: Hurlingham y Villa Tesei</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-slide">
                   <div class="fleet-card">
-                    <img src="./assets/image3.png" alt="Camión mediano" loading="lazy" width="600" height="350" decoding="async" />
+                    <div class="fleet-stage">
+                      <img src="./assets/image3.png" alt="Camión mediano" loading="lazy" width="600" height="350" decoding="async" />
+                    </div>
                     <div class="fleet-content">
+                      <span class="fleet-kicker">Unidad 03</span>
                       <h3>Camión mediano</h3>
-                      <p>Ideal para mudanzas completas</p>
-                      <span class="fleet-badge">Capacidad: 8-12 m³</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-slide">
-                  <div class="fleet-card">
-                    <img src="./assets/image4.png" alt="Camión grande" loading="lazy" width="600" height="350" decoding="async" />
-                    <div class="fleet-content">
-                      <h3>Camión grande</h3>
-                      <p>Carga comercial y muy pesada</p>
-                      <span class="fleet-badge">Capacidad: 15+ m³</span>
+                      <p>Balance ideal entre volumen y maniobrabilidad para hogares completos.</p>
+                      <ul class="fleet-specs">
+                        <li>Capacidad: 8-12 m³</li>
+                        <li>Ideal para: mudanzas familiares</li>
+                        <li>Cobertura: zona oeste de Buenos Aires</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -355,10 +366,18 @@
                 </svg>
               </button>
               <div class="carousel-dots">
-                <button type="button" class="carousel-dot" aria-label="Slide 1" data-index="0"></button>
-                <button type="button" class="carousel-dot" aria-label="Slide 2" data-index="1"></button>
-                <button type="button" class="carousel-dot" aria-label="Slide 3" data-index="2"></button>
-                <button type="button" class="carousel-dot" aria-label="Slide 4" data-index="3"></button>
+                <button type="button" class="carousel-dot" aria-label="Camión de mudanzas" data-index="0">
+                  <span class="dot-name">Mudanzas</span>
+                  <span class="dot-meta">3-5 m³</span>
+                </button>
+                <button type="button" class="carousel-dot" aria-label="Furgoneta de carga" data-index="1">
+                  <span class="dot-name">Furgoneta</span>
+                  <span class="dot-meta">5-8 m³</span>
+                </button>
+                <button type="button" class="carousel-dot" aria-label="Camión mediano" data-index="2">
+                  <span class="dot-name">Mediano</span>
+                  <span class="dot-meta">8-12 m³</span>
+                </button>
               </div>
               <button type="button" class="carousel-btn carousel-btn-next" aria-label="Siguiente">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
