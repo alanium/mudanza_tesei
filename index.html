@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="Mudanzas Tesei | Cotizacion por WhatsApp en Minutos" />
     <meta name="twitter:description" content="Mudanzas y fletes en Villa Tesei con respuesta rapida y atencion directa." />
     <meta name="twitter:image" content="https://www.mudanzastesei.com/assets/logo.png" />
-    <meta name="theme-color" content="#c26a35" />
+    <meta name="theme-color" content="#c2551f" />
     <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="./favicon-120x120.png" sizes="120x120" />
     <link rel="shortcut icon" href="./favicon.ico" />
@@ -28,9 +28,9 @@
     <title>Mudanzas Tesei | Cotizacion por WhatsApp en Minutos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="./assets/bg.jpg" />
+    <link rel="preload" as="image" href="./assets/2_.png" fetchpriority="high" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script type="application/ld+json">
@@ -112,6 +112,14 @@
                   "@type": "Answer",
                   "text": "Si. Trabajamos en Villa Tesei, Hurlingham y zonas cercanas de Buenos Aires."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Incluyen el embalaje?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El embalaje se cotiza aparte. Podes contratarlo junto con la mudanza o resolverlo por tu cuenta."
+                }
               }
             ]
           },
@@ -133,487 +141,320 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="topbar glass-effect" id="inicio">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <img src="./assets/logo.png" alt="Logo Mudanzas Tesei" width="58" height="58" fetchpriority="low" decoding="async" />
-        <span class="logo-text">Mudanzas Tesei</span>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu">
-        <span class="hamburger"></span>
-      </button>
-
-      <nav class="menu" id="mainMenu">
-        <a href="#servicios" class="nav-link">Servicios</a>
-        <a href="#servicios-complementarios" class="nav-link">Complementarios</a>
-        <a href="#flota" class="nav-link">Flota</a>
-        <a href="#horarios" class="nav-link">Horarios</a>
-        <a href="#contacto" class="nav-link">Contacto</a>
-        <a href="tel:+5491128233925" class="nav-link phone-link">📞 11-2823-3925</a>
-      </nav>
+    <header class="topbar" id="inicio">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="./index.html" aria-label="Ir al inicio">
+          <img class="logo-white" src="./assets/logo_white.png" alt="" width="36" height="36" decoding="async" />
+          <img class="logo-dark" src="./assets/logo.png" alt="" width="36" height="36" decoding="async" />
+          Mudanzas Tesei
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="mainMenu">
+          <a href="#servicios">Servicios</a>
+          <a href="#flota">Flota</a>
+          <a href="#zona">Zona</a>
+          <a href="#faq">Preguntas</a>
+          <a class="cta" href="#contacto">Pedir cotizacion</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="hero">
-        <img
-          class="hero-media"
-          src="./assets/2_.png"
-          alt="Camion de mudanzas en servicio"
-          width="1920"
-          height="1080"
-          fetchpriority="high"
-          decoding="async"
-        />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <div class="hero-badge fade-in">
-            <span class="badge-dot"></span>
-            <span>Villa Tesei, Buenos Aires</span>
+      <div class="hero-block">
+        <section class="hero">
+          <div class="hero-bg">
+            <img src="./assets/2_.png" alt="Camion de mudanzas en ruta" width="1920" height="1080" fetchpriority="high" decoding="async" />
           </div>
-          <h1 class="slide-up">
-            Mudanzas y fletes con atencion rapida y trato directo
-          </h1>
-          <p class="hero-copy slide-up delay-1">
-            Coordinamos tu traslado de forma simple: nos escribis, cotizamos y resolvemos.
-            Servicio para hogares, oficinas y traslados puntuales.
-          </p>
-          <div class="hero-actions slide-up delay-2">
-            <a class="btn btn-primary btn-glow" href="#contacto">
-              <span>Pedir cotizacion</span>
-              <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-            <a class="btn btn-secondary" href="tel:+5491128233925">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              Llamar ahora
-            </a>
+          <div class="wrap hero-inner">
+            <span class="hero-eyebrow">Villa Tesei &middot; Hurlingham &middot; Zona Oeste</span>
+            <h1>Tu mudanza, resuelta el mismo dia que la coordinas.</h1>
+            <p>Flota propia, precio cerrado antes de empezar y atencion directa por WhatsApp. Sin intermediarios y sin sorpresas.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#contacto">Pedir cotizacion</a>
+              <a class="btn btn-light" href="tel:+5491128233925">Llamar 11-2823-3925</a>
+            </div>
           </div>
-          <div class="trust-badges slide-up delay-3">
-            <div class="trust-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c26a35" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-              <span>100% Garantizado</span>
-            </div>
-            <div class="trust-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c26a35" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-              <span>Servicio Puntual</span>
-            </div>
-            <div class="trust-item">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c26a35" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-              <span>Equipo Profesional</span>
-            </div>
+        </section>
+
+        <div class="strip">
+          <div class="wrap strip-inner">
+            <div><strong>7 dias</strong><span>Lunes a domingo</span></div>
+            <div><strong>06 &mdash; 18h</strong><span>Franja de atencion</span></div>
+            <div><strong>3 unidades</strong><span>Flota propia</span></div>
+            <div><strong>Zona Oeste</strong><span>Cobertura</span></div>
+          </div>
+        </div>
+      </div>
+
+      <section id="servicios">
+        <div class="wrap">
+          <div class="head">
+            <h2>Que hacemos</h2>
+            <p>Tres formas de resolverlo, segun lo que necesites mover.</p>
+          </div>
+          <div class="svc-list">
+            <a class="svc" href="#contacto">
+              <span class="svc-num">01</span>
+              <div>
+                <h3>Mudanzas particulares</h3>
+                <p>Casa o departamento completo. Muebles, electrodomesticos y cajas, con proteccion en cada pieza y coordinacion de horario cerrada de antemano.</p>
+              </div>
+              <span class="svc-go">Solicitar &rarr;</span>
+            </a>
+            <a class="svc" href="#contacto">
+              <span class="svc-num">02</span>
+              <div>
+                <h3>Fletes programados</h3>
+                <p>Envios chicos y medianos por hora o por franja. Ideal si necesitas mover pocas cosas sin pagar una mudanza entera.</p>
+              </div>
+              <span class="svc-go">Solicitar &rarr;</span>
+            </a>
+            <a class="svc" href="https://wa.me/5491128233925" target="_blank" rel="noopener noreferrer">
+              <span class="svc-num">03</span>
+              <div>
+                <h3>Cotizacion por WhatsApp</h3>
+                <p>Mandas origen, destino y que hay que mover. Te devolvemos una estimacion concreta, no un "consultanos".</p>
+              </div>
+              <span class="svc-go">Escribir &rarr;</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="section" id="servicios">
-        <div class="section-header">
-          <div class="section-decoration"></div>
-          <div class="section-content">
-            <span class="kicker fade-in">¿Qué hacemos?</span>
-            <h2 class="slide-up">Servicio claro, sin vueltas</h2>
+      <section class="alt" id="flota">
+        <div class="wrap">
+          <div class="head">
+            <h2>Nuestra flota</h2>
+            <p>Tres unidades propias. Elegimos la que corresponde segun el volumen y el acceso.</p>
           </div>
-        </div>
-        <div class="cards-container">
-          <article class="card card-hover fade-in">
-            <div class="card-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c26a35" stroke-width="1.5">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                <line x1="8" y1="21" x2="16" y2="21"/>
-                <line x1="12" y1="17" x2="12" y2="21"/>
-              </svg>
-            </div>
-            <h3>Mudanzas particulares</h3>
-            <p>Traslado de muebles, electrodomésticos y cajas con cuidado y puntualidad. Manejamos todo tipo de cargas con protección especial.</p>
-            <a href="#contacto" class="card-link">Solicitar &rarr;</a>
-          </article>
-          <article class="card card-hover fade-in delay-1">
-            <div class="card-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c26a35" stroke-width="1.5">
-                <rect x="1" y="3" width="15" height="13"/>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                <circle cx="5.5" cy="18.5" r="2.5"/>
-                <circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
-            </div>
-            <h3>Fletes programados</h3>
-            <p>Coordinación por hora o franja para envíos chicos y medianos. Servicio flexible que se adapta a tu horario.</p>
-            <a href="#contacto" class="card-link">Solicitar &rarr;</a>
-          </article>
-          <article class="card card-hover fade-in delay-2">
-            <div class="card-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c26a35" stroke-width="1.5">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-              </svg>
-            </div>
-            <h3>Atención por WhatsApp</h3>
-            <p>Pasanos origen y destino, y te respondemos con una estimación rápida. Servicio de chat directo y confiable.</p>
-            <a href="https://wa.me/5491128233925" class="card-link">Contactar &rarr;</a>
-          </article>
+          <div class="fleet">
+            <article class="unit">
+              <div class="unit-photo">
+                <img src="./assets/image1.png" alt="Camion de mudanzas" loading="lazy" width="600" height="350" decoding="async" />
+              </div>
+              <div class="unit-body">
+                <span class="unit-tag">Unidad 01</span>
+                <h3>Camion de mudanzas</h3>
+                <span class="unit-vol">3 &ndash; 5 m&sup3;</span>
+                <dl>
+                  <div><dt>Ideal para</dt><dd>Deptos y parciales</dd></div>
+                  <div><dt>Cobertura</dt><dd>Villa Tesei</dd></div>
+                </dl>
+              </div>
+            </article>
+            <article class="unit">
+              <div class="unit-photo">
+                <img src="./assets/image2.png" alt="Furgoneta de carga" loading="lazy" width="600" height="350" decoding="async" />
+              </div>
+              <div class="unit-body">
+                <span class="unit-tag">Unidad 02</span>
+                <h3>Furgoneta de carga</h3>
+                <span class="unit-vol">5 &ndash; 8 m&sup3;</span>
+                <dl>
+                  <div><dt>Ideal para</dt><dd>Fletes por franja</dd></div>
+                  <div><dt>Cobertura</dt><dd>Hurlingham</dd></div>
+                </dl>
+              </div>
+            </article>
+            <article class="unit">
+              <div class="unit-photo">
+                <img src="./assets/image3.png" alt="Camion mediano" loading="lazy" width="600" height="350" decoding="async" />
+              </div>
+              <div class="unit-body">
+                <span class="unit-tag">Unidad 03</span>
+                <h3>Camion mediano</h3>
+                <span class="unit-vol">8 &ndash; 12 m&sup3;</span>
+                <dl>
+                  <div><dt>Ideal para</dt><dd>Mudanza familiar</dd></div>
+                  <div><dt>Cobertura</dt><dd>Zona Oeste</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="servicios-complementarios">
-        <div class="section-header">
-          <div class="section-decoration"></div>
-          <div class="section-content">
-            <span class="kicker fade-in">Servicios complementarios</span>
-            <h2 class="slide-up">Sumamos soluciones para que tu mudanza sea mas simple</h2>
+      <section id="servicios-complementarios">
+        <div class="wrap">
+          <div class="head">
+            <h2>Servicios complementarios</h2>
+            <p>Se suman a la mudanza si los necesitas. Se cotizan aparte.</p>
           </div>
-        </div>
-        <div class="cards-container complement-grid">
-          <article class="card service-media-card fade-in">
-            <img src="./assets/3.jpg" alt="Embalaje profesional de cajas y objetos delicados" loading="lazy" width="900" height="520" decoding="async" />
-            <div class="service-media-content">
+
+          <div class="row">
+            <div>
               <h3>Embalaje profesional</h3>
-              <p>Envolvemos y protegemos cada pieza con materiales resistentes y una metodologia ordenada para reducir golpes, rayones y roturas durante el traslado.</p>
-              <a href="#contacto" class="card-link">Quiero incluirlo &rarr;</a>
+              <p>Envolvemos y protegemos cada pieza con materiales resistentes y un metodo ordenado, para reducir golpes, rayones y roturas durante el traslado.</p>
+              <a class="link" href="#contacto">Quiero incluirlo</a>
             </div>
-          </article>
+            <div class="row-photo">
+              <img src="./assets/3.jpg" alt="Embalaje profesional de cajas y objetos delicados" loading="lazy" width="900" height="600" decoding="async" />
+            </div>
+          </div>
 
-          <article class="card service-media-card fade-in delay-1">
-            <img src="./assets/1.png" alt="Camioneta de mudanza con carga acomodada" loading="lazy" width="900" height="520" decoding="async" />
-            <div class="service-media-content">
+          <div class="row">
+            <div>
               <h3>Armado y desarmado de muebles</h3>
-              <p>Desmontamos, etiquetamos y volvemos a montar muebles clave para que todo llegue en condiciones y puedas instalarte rapido sin perder tiempo.</p>
-              <a href="#contacto" class="card-link">Pedir este servicio &rarr;</a>
+              <p>Desmontamos, etiquetamos y volvemos a montar los muebles clave, para que puedas instalarte rapido sin perder el dia resolviendo tornillos.</p>
+              <a class="link" href="#contacto">Pedir este servicio</a>
             </div>
-          </article>
+            <div class="row-photo">
+              <img src="./assets/1.png" alt="Camioneta de mudanza con carga acomodada" loading="lazy" width="900" height="600" decoding="async" />
+            </div>
+          </div>
 
-          <article class="card service-media-card fade-in delay-2">
-            <img src="./assets/2.png" alt="Camioneta de carga circulando por ruta" loading="lazy" width="900" height="520" decoding="async" />
-            <div class="service-media-content">
+          <div class="row">
+            <div>
               <h3>Logistica coordinada y fletes compartidos</h3>
-              <p>Armamos recorridos eficientes y opciones compartidas cuando conviene, para optimizar tiempos y costos sin resignar cuidado en la carga.</p>
-              <a href="#contacto" class="card-link">Consultar disponibilidad &rarr;</a>
+              <p>Armamos recorridos eficientes y opciones compartidas cuando conviene, para bajar el costo sin resignar cuidado en la carga.</p>
+              <a class="link" href="#contacto">Consultar disponibilidad</a>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="flota">
-        <div class="section-split">
-          <div class="section-left">
-            <div class="section-decoration"></div>
-            <div class="section-content">
-              <span class="kicker fade-in">Nuestra flota</span>
-              <h2 class="slide-up">Vehiculos listos para cada traslado</h2>
-              <p class="section-text slide-up delay-1">
-                Contamos con una flota variada adaptada a las necesidades de cada cliente. Desde movimientos domésticos hasta cargas comerciales, tenemos la unidad perfecta.
-              </p>
-            </div>
-          </div>
-          <div class="fleet-carousel">
-            <div class="carousel-viewport">
-              <div class="carousel-track">
-                <div class="carousel-slide">
-                  <div class="fleet-card">
-                    <div class="fleet-stage">
-                      <img src="./assets/image1.png" alt="Camión de mudanzas pequeño" loading="lazy" width="600" height="350" decoding="async" />
-                    </div>
-                    <div class="fleet-content">
-                      <span class="fleet-kicker">Unidad 01</span>
-                      <h3>Camión de mudanzas</h3>
-                      <p>Configuracion agil para traslados residenciales en la zona.</p>
-                      <ul class="fleet-specs">
-                        <li>Capacidad: 3-5 m³</li>
-                        <li>Ideal para: deptos y mudanzas parciales</li>
-                        <li>Cobertura: Villa Tesei y alrededores</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-slide">
-                  <div class="fleet-card">
-                    <div class="fleet-stage">
-                      <img src="./assets/image2.png" alt="Furgoneta de carga" loading="lazy" width="600" height="350" decoding="async" />
-                    </div>
-                    <div class="fleet-content">
-                      <span class="fleet-kicker">Unidad 02</span>
-                      <h3>Furgoneta de carga</h3>
-                      <p>Versatil para entregas puntuales y recorridos de corta distancia.</p>
-                      <ul class="fleet-specs">
-                        <li>Capacidad: 5-8 m³</li>
-                        <li>Ideal para: fletes por franja horaria</li>
-                        <li>Cobertura: Hurlingham y Villa Tesei</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-slide">
-                  <div class="fleet-card">
-                    <div class="fleet-stage">
-                      <img src="./assets/image3.png" alt="Camión mediano" loading="lazy" width="600" height="350" decoding="async" />
-                    </div>
-                    <div class="fleet-content">
-                      <span class="fleet-kicker">Unidad 03</span>
-                      <h3>Camión mediano</h3>
-                      <p>Balance ideal entre volumen y maniobrabilidad para hogares completos.</p>
-                      <ul class="fleet-specs">
-                        <li>Capacidad: 8-12 m³</li>
-                        <li>Ideal para: mudanzas familiares</li>
-                        <li>Cobertura: zona oeste de Buenos Aires</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-nav">
-              <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Anterior">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M15 18l-6-6 6-6"/>
-                </svg>
-              </button>
-              <div class="carousel-dots">
-                <button type="button" class="carousel-dot" aria-label="Camión de mudanzas" data-index="0">
-                  <span class="dot-name">Mudanzas</span>
-                  <span class="dot-meta">3-5 m³</span>
-                </button>
-                <button type="button" class="carousel-dot" aria-label="Furgoneta de carga" data-index="1">
-                  <span class="dot-name">Furgoneta</span>
-                  <span class="dot-meta">5-8 m³</span>
-                </button>
-                <button type="button" class="carousel-dot" aria-label="Camión mediano" data-index="2">
-                  <span class="dot-name">Mediano</span>
-                  <span class="dot-meta">8-12 m³</span>
-                </button>
-              </div>
-              <button type="button" class="carousel-btn carousel-btn-next" aria-label="Siguiente">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-              </button>
+            <div class="row-photo">
+              <img src="./assets/2.png" alt="Camioneta de carga circulando por ruta" loading="lazy" width="900" height="600" decoding="async" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section split" id="horarios">
-        <div class="panel">
-          <div class="panel-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <div class="panel-content">
-            <span class="kicker fade-in">Disponibilidad</span>
-            <h2 class="slide-up">Horarios de atención</h2>
-            <ul class="schedule">
-              <li class="schedule-item slide-up delay-1">
-                <div class="schedule-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                    <line x1="16" y1="2" x2="16" y2="6"/>
-                    <line x1="8" y1="2" x2="8" y2="6"/>
-                    <line x1="3" y1="10" x2="21" y2="10"/>
-                  </svg>
-                </div>
-                <div class="schedule-info">
-                  <strong>Lunes a Viernes</strong>
-                  <span>06:00 - 18:00</span>
-                </div>
-              </li>
-              <li class="schedule-item slide-up delay-2">
-                <div class="schedule-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                </div>
-                <div class="schedule-info">
-                  <strong>Sábado y Domingo</strong>
-                  <span>06:00 - 18:00</span>
-                </div>
-              </li>
-            </ul>
-            <p class="location slide-up delay-3">
-              📍 Villa Tesei, Provincia de Buenos Aires
-            </p>
-          </div>
-        </div>
-
-        <div class="panel map-panel">
-          <div class="panel-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <div class="panel-content">
-            <span class="kicker fade-in">Ubicación</span>
-            <h2 class="slide-up">Donde estamos</h2>
-            <div class="map-wrapper">
-              <iframe
-                title="Ubicacion de Mudanzas Tesei"
-                src="https://www.google.com/maps?q=Villa+Tesei,+Buenos+Aires&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+      <section class="alt" id="zona">
+        <div class="wrap info">
+          <div>
+            <div class="head" style="margin-bottom:0">
+              <h2>Horarios y zona</h2>
+              <p>Trabajamos todos los dias con coordinacion previa.</p>
             </div>
-            <a class="text-link" href="https://maps.google.com/?q=Villa+Tesei,+Buenos+Aires" target="_blank" rel="noopener noreferrer">
-              📍 Abrir en Google Maps
-            </a>
+            <div class="hours">
+              <div><strong>Lunes a viernes</strong><span>06:00 &ndash; 18:00</span></div>
+              <div><strong>Sabados</strong><span>06:00 &ndash; 18:00</span></div>
+              <div><strong>Domingos</strong><span>06:00 &ndash; 18:00</span></div>
+              <div><strong>Base</strong><span>Villa Tesei, Buenos Aires</span></div>
+            </div>
+          </div>
+          <div class="map">
+            <iframe
+              title="Ubicacion de Mudanzas Tesei"
+              src="https://www.google.com/maps?q=Villa+Tesei,+Buenos+Aires&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
 
-      <section class="section" id="contacto">
-        <div class="contact-wrapper">
-          <div class="contact-header">
-            <div class="contact-decoration"></div>
-            <div class="contact-content">
-              <span class="kicker fade-in">Contacto</span>
-              <h2 class="slide-up">Pedinos una cotizacion en 1 minuto</h2>
-            </div>
+      <section id="contacto">
+        <div class="wrap">
+          <div class="head">
+            <h2>Pedinos una cotizacion</h2>
+            <p>Un minuto de tu tiempo. Te respondemos por WhatsApp.</p>
           </div>
-
-          <div class="contact-container">
-            <form class="contact-form" id="quoteForm">
-              <div class="form-row">
-                <div class="form-group fade-in">
+          <div class="contact">
+            <form id="quoteForm">
+              <div class="frow">
+                <div>
                   <label for="name">Nombre completo *</label>
-                  <input type="text" id="name" name="name" required placeholder="Tu nombre" />
+                  <input type="text" id="name" name="name" required autocomplete="name" placeholder="Tu nombre" />
                 </div>
-                <div class="form-group fade-in delay-1">
-                  <label for="phone">Teléfono</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" />
+                <div>
+                  <label for="phone">Telefono</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="11-0000-0000" />
                 </div>
               </div>
-              <div class="form-row">
-                <div class="form-group fade-in delay-2">
+              <div class="frow">
+                <div>
                   <label for="origin">Origen *</label>
-                  <input type="text" id="origin" name="origin" required placeholder="¿De dónde?" />
+                  <input type="text" id="origin" name="origin" required placeholder="&iquest;De donde?" />
                 </div>
-                <div class="form-group fade-in delay-3">
+                <div>
                   <label for="destination">Destino *</label>
-                  <input type="text" id="destination" name="destination" required placeholder="¿Hacia dónde?" />
+                  <input type="text" id="destination" name="destination" required placeholder="&iquest;Hacia donde?" />
                 </div>
               </div>
-              <div class="form-group fade-in">
-                <label for="details">Detalles adicionales</label>
-                <textarea id="details" name="details" rows="3" placeholder="Cuéntanos más sobre tu traslado..."></textarea>
+              <div>
+                <label for="details">Que hay que mover</label>
+                <textarea id="details" name="details" rows="4" placeholder="Ej: departamento de 2 ambientes, sin ascensor, un sillon grande..."></textarea>
               </div>
-              <div class="form-actions fade-in">
-                <button type="submit" class="btn btn-primary btn-glow">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                  <span>Enviar por WhatsApp</span>
-                </button>
-                <a class="btn btn-secondary" href="tel:+5491128233925">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                  <span>Llamar 11-2823-3925</span>
-                </a>
+              <div class="actions" style="margin-top:6px">
+                <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+                <a class="btn btn-ghost" href="tel:+5491128233925">Llamar</a>
               </div>
             </form>
 
-            <div class="contact-info fade-in delay-2">
-              <div class="info-card">
-                <div class="info-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 11.5A8.5 8.5 0 0 1 8.9 19.3L3 21l1.7-5.9A8.5 8.5 0 1 1 21 11.5z"/>
-                  </svg>
-                </div>
-                <div class="info-content">
-                  <h4>WhatsApp</h4>
-                  <p>11-2823-3925</p>
-                </div>
-              </div>
-              <div class="info-card fade-in delay-1">
-                <div class="info-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                </div>
-                <div class="info-content">
-                  <h4>Local</h4>
-                  <p>11-2823-3925</p>
-                </div>
-              </div>
-              <div class="info-card fade-in delay-2">
-                <div class="info-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <div class="info-content">
-                  <h4>Zona</h4>
-                  <p>Villa Tesei, BA</p>
-                </div>
-              </div>
-            </div>
+            <aside class="side">
+              <h3>O escribinos directo</h3>
+              <dl>
+                <div><dt>WhatsApp</dt><dd>11-2823-3925</dd></div>
+                <div><dt>Telefono</dt><dd>11-2823-3925</dd></div>
+                <div><dt>Zona</dt><dd>Villa Tesei, BA</dd></div>
+                <div><dt>Atencion</dt><dd>Lun a dom &middot; 06 &ndash; 18h</dd></div>
+              </dl>
+            </aside>
           </div>
         </div>
       </section>
 
-      <section class="section" id="faq">
-        <div class="section-header">
-          <div class="section-decoration"></div>
-          <div class="section-content">
-            <span class="kicker fade-in">Preguntas frecuentes</span>
-            <h2 class="slide-up">Respuestas rapidas antes de pedir cotizacion</h2>
+      <section class="alt" id="faq">
+        <div class="wrap">
+          <div class="head"><h2>Preguntas frecuentes</h2></div>
+          <div class="faq">
+            <details open>
+              <summary>&iquest;Que datos necesitan para cotizar?</summary>
+              <p>Origen, destino, fecha aproximada y una breve descripcion de lo que hay que trasladar. Con eso te respondemos rapido.</p>
+            </details>
+            <details>
+              <summary>&iquest;Trabajan fines de semana?</summary>
+              <p>Si. Atendemos de lunes a domingo de 06:00 a 18:00, con coordinacion previa por WhatsApp o telefono.</p>
+            </details>
+            <details>
+              <summary>&iquest;Cubren Villa Tesei y zonas cercanas?</summary>
+              <p>Si. Trabajamos en Villa Tesei, Hurlingham y distintos puntos de la zona oeste de Buenos Aires.</p>
+            </details>
+            <details>
+              <summary>&iquest;Incluyen el embalaje?</summary>
+              <p>Se cotiza aparte. Podes contratarlo junto con la mudanza o resolverlo por tu cuenta, como prefieras.</p>
+            </details>
           </div>
-        </div>
-        <div class="cards-container faq-grid">
-          <article class="card fade-in">
-            <h3>¿Qué datos necesitan para cotizar?</h3>
-            <p>Origen, destino, fecha aproximada y una breve descripcion de lo que hay que trasladar. Con eso te respondemos rapido.</p>
-          </article>
-          <article class="card fade-in delay-1">
-            <h3>¿Trabajan fines de semana?</h3>
-            <p>Si. Atendemos de lunes a domingo de 06:00 a 18:00 con coordinacion previa por WhatsApp o telefono.</p>
-          </article>
-          <article class="card fade-in delay-2">
-            <h3>¿Cubren Villa Tesei y zonas cercanas?</h3>
-            <p>Si. Realizamos mudanzas y fletes en Villa Tesei, Hurlingham y distintos puntos de Buenos Aires.</p>
-          </article>
         </div>
       </section>
     </main>
 
     <a
-      class="whatsapp-float"
+      class="wa"
       href="https://wa.me/5491128233925?text=Hola%20Mudanzas%20Tesei%2C%20quiero%20pedir%20una%20cotizacion."
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Abrir WhatsApp para pedir cotizacion"
+      aria-label="Escribinos por WhatsApp"
     >
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path fill="currentColor" d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.42 0 .05 5.37.05 11.97c0 2.11.55 4.17 1.59 5.98L0 24l6.21-1.63a11.95 11.95 0 0 0 5.81 1.49h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.2-3.48-8.41Zm-8.5 18.36h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.69.97.99-3.6-.23-.37a9.92 9.92 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47a8.94 8.94 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.02-1.05 2.48 0 1.47 1.08 2.88 1.23 3.08.15.2 2.1 3.21 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
       </svg>
-      <span>WhatsApp</span>
+      <span class="wa-label">WhatsApp</span>
     </a>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <img src="./assets/logo.png" alt="Logo Mudanzas Tesei" width="40" height="40" loading="lazy" decoding="async" />
-          <span>Mudanzas Tesei</span>
+    <footer>
+      <div class="wrap">
+        <div class="foot">
+          <div>
+            <a class="brand" href="./index.html">
+              <img src="./assets/logo_white.png" alt="" width="36" height="36" loading="lazy" decoding="async" />
+              Mudanzas Tesei
+            </a>
+            <p>Mudanzas y fletes en Villa Tesei, Hurlingham y zona oeste de Buenos Aires.</p>
+          </div>
+          <div>
+            <h4>Servicios</h4>
+            <a href="./mudanzas-villa-tesei.html">Mudanzas en Villa Tesei</a>
+            <a href="./fletes-villa-tesei.html">Fletes en Villa Tesei</a>
+            <a href="./fletes-hurlingham-villa-tesei.html">Fletes en Hurlingham</a>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <a href="https://wa.me/5491128233925" target="_blank" rel="noopener noreferrer">WhatsApp 11-2823-3925</a>
+            <a href="tel:+5491128233925">Llamar 11-2823-3925</a>
+          </div>
         </div>
-        <p><a class="footer-link" href="./mudanzas-villa-tesei.html">Mudanzas en Villa Tesei</a></p>
-        <p><a class="footer-link" href="./fletes-villa-tesei.html">Fletes en Villa Tesei</a></p>
-        <p><a class="footer-link" href="./fletes-hurlingham-villa-tesei.html">Fletes en Hurlingham y Villa Tesei</a></p>
-        <p>© <span id="year"></span> - Mudanzas y fletes profesionales en Villa Tesei</p>
-      </div>
-      <div class="footer-decorations">
-        <div class="footer-line"></div>
+        <div class="legal">&copy; <span id="year"></span> Mudanzas Tesei &mdash; Villa Tesei, Buenos Aires</div>
       </div>
     </footer>
 

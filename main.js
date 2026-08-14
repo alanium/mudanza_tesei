@@ -1,130 +1,81 @@
 const PHONE_NUMBER = "5491128233925";
 
-const menuToggle = document.getElementById("menuToggle");
-const mainMenu = document.getElementById("mainMenu");
-const quoteForm = document.getElementById("quoteForm");
+/* --------------------------------------------------------------------------
+   Navbar: transparente sobre el hero, solida al scrollear.
+   Tambien maneja el menu desplegable en mobile.
+   -------------------------------------------------------------------------- */
+(function () {
+  const bar = document.querySelector(".topbar");
+  const hero = document.querySelector(".hero");
+  const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("mainMenu");
+
+  if (!bar) return;
+
+  let overHero = Boolean(hero);
+  let menuOpen = false;
+
+  // Solida cuando ya no estamos sobre la foto, o cuando el menu esta abierto
+  // (si no, el panel blanco quedaria con el logo y los links blancos encima).
+  const sync = () => {
+    bar.classList.toggle("solid", !overHero || menuOpen);
+  };
+
+  if (hero) {
+    new IntersectionObserver(
+      (entries) => {
+        overHero = entries[0].isIntersecting;
+        sync();
+      },
+      { rootMargin: "-78px 0px 0px 0px", threshold: 0 }
+    ).observe(hero);
+  }
+
+  sync();
+
+  if (toggle && menu) {
+    const setMenu = (open) => {
+      menuOpen = open;
+      menu.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Cerrar menu" : "Abrir menu");
+      sync();
+    };
+
+    toggle.addEventListener("click", () => setMenu(!menuOpen));
+
+    menu.addEventListener("click", (event) => {
+      if (event.target.tagName === "A") setMenu(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menuOpen) setMenu(false);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!menuOpen) return;
+      if (!menu.contains(event.target) && !toggle.contains(event.target)) setMenu(false);
+    });
+
+    // al volver a desktop el panel no debe quedar colgado
+    window.matchMedia("(min-width: 901px)").addEventListener("change", (event) => {
+      if (event.matches && menuOpen) setMenu(false);
+    });
+  }
+})();
+
+/* --------------------------------------------------------------------------
+   Año del footer
+   -------------------------------------------------------------------------- */
 const yearTarget = document.getElementById("year");
-
-// Carousel functionality
-const carousel = document.querySelector(".fleet-carousel");
-const carouselTrack = document.querySelector(".carousel-track");
-const carouselSlides = document.querySelectorAll(".carousel-slide");
-const prevBtn = document.querySelector(".carousel-btn-prev");
-const nextBtn = document.querySelector(".carousel-btn-next");
-const dots = document.querySelectorAll(".carousel-dot");
-
-let currentSlide = 0;
-const totalSlides = carouselSlides.length;
-
-if (carousel && carouselTrack && prevBtn && nextBtn && dots.length > 0) {
-  const updateCarousel = () => {
-    carouselTrack.style.transform = `translate3d(-${currentSlide * 100}%, 0, 0)`;
-    carouselSlides.forEach((slide, index) => {
-      slide.classList.toggle("active", index === currentSlide);
-      slide.setAttribute("aria-hidden", String(index !== currentSlide));
-    });
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentSlide);
-      dot.setAttribute("aria-current", String(index === currentSlide));
-    });
-  };
-
-  const nextSlide = () => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
-  };
-
-  const prevSlide = () => {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  };
-
-  const goToSlide = (index) => {
-    currentSlide = index;
-    updateCarousel();
-  };
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", nextSlide);
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", prevSlide);
-  }
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => goToSlide(index));
-  });
-
-  // Auto-play carousel
-  let autoPlayInterval = null;
-  const startAutoPlay = () => {
-    stopAutoPlay();
-    autoPlayInterval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-  };
-
-  const stopAutoPlay = () => {
-    if (autoPlayInterval) {
-      clearInterval(autoPlayInterval);
-      autoPlayInterval = null;
-    }
-  };
-
-  if (carousel) {
-    carousel.addEventListener("mouseenter", stopAutoPlay);
-    carousel.addEventListener("mouseleave", startAutoPlay);
-    carousel.addEventListener("focusin", stopAutoPlay);
-    carousel.addEventListener("focusout", startAutoPlay);
-  }
-
-  // Initialize carousel
-  updateCarousel();
-  startAutoPlay();
-}
-
 if (yearTarget) {
   yearTarget.textContent = new Date().getFullYear();
 }
 
-if (menuToggle && mainMenu) {
-  const closeMenu = () => {
-    mainMenu.classList.remove("is-open");
-    menuToggle.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded", "false");
-  };
-
-  menuToggle.addEventListener("click", () => {
-    const isOpen = mainMenu.classList.toggle("is-open");
-    menuToggle.classList.toggle("active");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  mainMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      closeMenu();
-    });
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!mainMenu.classList.contains("is-open")) {
-      return;
-    }
-
-    const target = event.target;
-    if (target instanceof Node && !mainMenu.contains(target) && !menuToggle.contains(target)) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-  });
-}
-
+/* --------------------------------------------------------------------------
+   Formulario de cotizacion -> WhatsApp
+   -------------------------------------------------------------------------- */
+const quoteForm = document.getElementById("quoteForm");
 if (quoteForm) {
   quoteForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -141,16 +92,11 @@ if (quoteForm) {
       return;
     }
 
-    let message = `Hola, soy ${name}. Quiero pedir cotización para una mudanza/flete. `;
+    let message = `Hola, soy ${name}. Quiero pedir cotizacion para una mudanza/flete. `;
     message += `Origen: ${origin}. Destino: ${destination}.`;
 
-    if (phone) {
-      message += ` Teléfono: ${phone}.`;
-    }
-
-    if (details) {
-      message += ` Detalles: ${details}.`;
-    }
+    if (phone) message += ` Telefono: ${phone}.`;
+    if (details) message += ` Detalles: ${details}.`;
 
     const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener");

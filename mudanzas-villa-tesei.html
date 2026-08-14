@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="Mudanzas en Villa Tesei | Cotizacion por WhatsApp" />
     <meta name="twitter:description" content="Pedi precio para tu mudanza en Villa Tesei en minutos." />
     <meta name="twitter:image" content="https://www.mudanzastesei.com/assets/logo.png" />
-    <meta name="theme-color" content="#c26a35" />
+    <meta name="theme-color" content="#c2551f" />
     <link rel="icon" href="./favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" href="./favicon-120x120.png" sizes="120x120" />
     <link rel="shortcut icon" href="./favicon.ico" />
@@ -28,9 +28,9 @@
     <title>Mudanzas en Villa Tesei | Cotizacion por WhatsApp en Minutos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="./assets/bg.jpg" />
+    <link rel="preload" as="image" href="./assets/bg.jpg" fetchpriority="high" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script type="application/ld+json">
@@ -109,163 +109,135 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header class="topbar glass-effect" id="inicio">
-      <a class="brand" href="./index.html" aria-label="Volver al inicio">
-        <img src="./assets/logo.png" alt="Logo Mudanzas Tesei" width="58" height="58" fetchpriority="low" decoding="async" />
-        <span class="logo-text">Mudanzas Tesei</span>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu">
-        <span class="hamburger"></span>
-      </button>
-
-      <nav class="menu" id="mainMenu">
-        <a href="./index.html" class="nav-link">Inicio</a>
-        <a href="#beneficios" class="nav-link">Beneficios</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#contacto" class="nav-link">Contacto</a>
-        <a href="tel:+5491128233925" class="nav-link phone-link">📞 11-2823-3925</a>
-      </nav>
+    <header class="topbar" id="inicio">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="./index.html" aria-label="Volver al inicio">
+          <img class="logo-white" src="./assets/logo_white.png" alt="" width="36" height="36" decoding="async" />
+          <img class="logo-dark" src="./assets/logo.png" alt="" width="36" height="36" decoding="async" />
+          Mudanzas Tesei
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="mainMenu">
+          <a href="./index.html">Inicio</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#faq">Preguntas</a>
+          <a class="cta" href="#contacto">Pedir cotizacion</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="hero">
-        <img
-          class="hero-media"
-          src="./assets/bg.jpg"
-          alt="Mudanzas en Villa Tesei"
-          width="1920"
-          height="1080"
-          fetchpriority="high"
-          decoding="async"
-        />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <div class="hero-badge fade-in">
-            <span class="badge-dot"></span>
-            <span>Servicio local en Villa Tesei</span>
-          </div>
-          <h1 class="slide-up">Mudanzas en Villa Tesei con respuesta rapida</h1>
-          <p class="hero-copy slide-up delay-1">
-            Organizamos tu mudanza o flete con trato directo. Contanos origen y destino, y te
-            pasamos una cotizacion clara por WhatsApp.
-          </p>
-          <div class="hero-actions slide-up delay-2">
-            <a class="btn btn-primary btn-glow" href="#contacto"><span>Pedir cotizacion ahora</span></a>
-            <a class="btn btn-secondary" href="tel:+5491128233925"><span>Llamar 11-2823-3925</span></a>
+      <section class="hero hero-page">
+        <div class="hero-bg">
+          <img src="./assets/bg.jpg" alt="Mudanzas en Villa Tesei" width="1920" height="1080" fetchpriority="high" decoding="async" />
+        </div>
+        <div class="wrap hero-inner">
+          <span class="hero-eyebrow">Servicio local en Villa Tesei</span>
+          <h1>Mudanzas en Villa Tesei con respuesta rapida</h1>
+          <p>Organizamos tu mudanza con trato directo. Contanos origen y destino, y te pasamos una cotizacion clara por WhatsApp.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contacto">Pedir cotizacion</a>
+            <a class="btn btn-light" href="tel:+5491128233925">Llamar 11-2823-3925</a>
           </div>
         </div>
       </section>
 
-      <section class="section" id="beneficios">
-        <div class="section-header">
-          <div class="section-decoration"></div>
-          <div class="section-content">
-            <span class="kicker fade-in">Por que elegirnos</span>
-            <h2 class="slide-up">Mudanzas y fletes pensados para tu tiempo</h2>
+      <section id="beneficios">
+        <div class="wrap">
+          <div class="head">
+            <h2>Mudanzas pensadas para tu tiempo</h2>
+            <p>Por que conviene resolverlo con nosotros.</p>
           </div>
-        </div>
-        <div class="cards-container">
-          <article class="card card-hover fade-in">
-            <h3>Coordinacion simple</h3>
-            <p>Nos escribis por WhatsApp, te cotizamos y coordinamos fecha y horario segun tu necesidad.</p>
-          </article>
-          <article class="card card-hover fade-in delay-1">
-            <h3>Atencion local</h3>
-            <p>Trabajamos en Villa Tesei y alrededores, con conocimiento de la zona para resolver mas rapido.</p>
-          </article>
-          <article class="card card-hover fade-in delay-2">
-            <h3>Horarios amplios</h3>
-            <p>Atendemos de lunes a domingo de 06:00 a 18:00 con turnos programados.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split" id="faq">
-        <div class="panel">
-          <div class="panel-content">
-            <span class="kicker fade-in">FAQ</span>
-            <h2 class="slide-up">Preguntas frecuentes</h2>
-            <ul class="schedule">
-              <li class="schedule-item slide-up delay-1">
-                <div class="schedule-info">
-                  <strong>¿Qué necesito para cotizar?</strong>
-                  <span>Origen, destino, fecha aproximada y descripcion breve de la carga.</span>
-                </div>
-              </li>
-              <li class="schedule-item slide-up delay-2">
-                <div class="schedule-info">
-                  <strong>¿Trabajan fines de semana?</strong>
-                  <span>Si, trabajamos de lunes a domingo con coordinacion previa.</span>
-                </div>
-              </li>
-              <li class="schedule-item slide-up delay-3">
-                <div class="schedule-info">
-                  <strong>¿Solo hacen mudanzas grandes?</strong>
-                  <span>No. Hacemos mudanzas completas y tambien fletes chicos programados.</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="panel panel-contact" id="contacto">
-          <div class="panel-content panel-content-cta">
-            <span class="kicker fade-in">Contacto directo</span>
-            <h2 class="slide-up">Pedi tu cotizacion en minutos</h2>
-            <p class="section-text slide-up delay-1">
-              Escribinos por WhatsApp o llamanos para coordinar tu mudanza en Villa Tesei.
-            </p>
-            <div class="cta-stage slide-up delay-2">
-              <div class="cta-card">
-                <p class="cta-card-title">Elegi como queres contactarnos</p>
-                <div class="hero-actions panel-cta-actions">
-                  <a class="btn btn-whatsapp" href="https://wa.me/5491128233925?text=Hola%2C%20estoy%20interesado%20en%20una%20mudanza%20en%20Villa%20Tesei.%20Quisiera%20una%20cotizacion.">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M21 11.5A8.5 8.5 0 0 1 8.9 19.3L3 21l1.7-5.9A8.5 8.5 0 1 1 21 11.5z"/>
-                    </svg>
-                    <span>WhatsApp</span>
-                  </a>
-                  <a class="btn btn-call" href="tel:+5491128233925">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
-                    <span>Telefono</span>
-                  </a>
-                </div>
-              </div>
+          <div class="cols">
+            <div class="col">
+              <div class="col-rule"></div>
+              <h3>Coordinacion simple</h3>
+              <p>Nos escribis por WhatsApp, te cotizamos y coordinamos fecha y horario segun tu necesidad. Sin idas y vueltas.</p>
             </div>
+            <div class="col">
+              <div class="col-rule"></div>
+              <h3>Atencion local</h3>
+              <p>Trabajamos en Villa Tesei y alrededores. Conocemos la zona, los accesos y los tiempos reales de cada recorrido.</p>
+            </div>
+            <div class="col">
+              <div class="col-rule"></div>
+              <h3>Horarios amplios</h3>
+              <p>Atendemos de lunes a domingo de 06:00 a 18:00 con turnos programados, para que no pierdas un dia de trabajo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt" id="faq">
+        <div class="wrap">
+          <div class="head"><h2>Preguntas frecuentes</h2></div>
+          <div class="faq">
+            <details open>
+              <summary>&iquest;Que necesito para cotizar?</summary>
+              <p>Origen, destino, fecha aproximada y una descripcion breve de la carga. Con eso te pasamos precio por WhatsApp.</p>
+            </details>
+            <details>
+              <summary>&iquest;Trabajan fines de semana?</summary>
+              <p>Si, trabajamos de lunes a domingo con coordinacion previa.</p>
+            </details>
+            <details>
+              <summary>&iquest;Solo hacen mudanzas grandes?</summary>
+              <p>No. Hacemos mudanzas completas y tambien fletes chicos programados.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" id="contacto">
+        <div class="wrap">
+          <h2>Pedi tu cotizacion en minutos</h2>
+          <p>Escribinos por WhatsApp o llamanos para coordinar tu mudanza en Villa Tesei.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/5491128233925?text=Hola%2C%20estoy%20interesado%20en%20una%20mudanza%20en%20Villa%20Tesei.%20Quisiera%20una%20cotizacion." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+            <a class="btn btn-light" href="tel:+5491128233925">Llamar 11-2823-3925</a>
           </div>
         </div>
       </section>
     </main>
 
     <a
-      class="whatsapp-float"
+      class="wa"
       href="https://wa.me/5491128233925?text=Hola%20Mudanzas%20Tesei%2C%20quiero%20pedir%20una%20cotizacion."
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Abrir WhatsApp para pedir cotizacion"
+      aria-label="Escribinos por WhatsApp"
     >
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path fill="currentColor" d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.42 0 .05 5.37.05 11.97c0 2.11.55 4.17 1.59 5.98L0 24l6.21-1.63a11.95 11.95 0 0 0 5.81 1.49h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.2-3.48-8.41Zm-8.5 18.36h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.69.97.99-3.6-.23-.37a9.92 9.92 0 0 1-1.52-5.27c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.13 1.03 7 2.9a9.84 9.84 0 0 1 2.9 7c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47a8.94 8.94 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.02-1.05 2.48 0 1.47 1.08 2.88 1.23 3.08.15.2 2.1 3.21 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.88.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
       </svg>
-      <span>WhatsApp</span>
+      <span class="wa-label">WhatsApp</span>
     </a>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <img src="./assets/logo.png" alt="Logo Mudanzas Tesei" width="40" height="40" loading="lazy" decoding="async" />
-          <span>Mudanzas Tesei</span>
+    <footer>
+      <div class="wrap">
+        <div class="foot">
+          <div>
+            <a class="brand" href="./index.html">
+              <img src="./assets/logo_white.png" alt="" width="36" height="36" loading="lazy" decoding="async" />
+              Mudanzas Tesei
+            </a>
+            <p>Mudanzas y fletes en Villa Tesei, Hurlingham y zona oeste de Buenos Aires.</p>
+          </div>
+          <div>
+            <h4>Servicios</h4>
+            <a href="./index.html">Sitio principal</a>
+            <a href="./fletes-villa-tesei.html">Fletes en Villa Tesei</a>
+            <a href="./fletes-hurlingham-villa-tesei.html">Fletes en Hurlingham</a>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <a href="https://wa.me/5491128233925" target="_blank" rel="noopener noreferrer">WhatsApp 11-2823-3925</a>
+            <a href="tel:+5491128233925">Llamar 11-2823-3925</a>
+          </div>
         </div>
-        <p><a class="footer-link" href="./index.html">Ver sitio principal</a></p>
-        <p><a class="footer-link" href="./fletes-villa-tesei.html">Ver pagina de fletes</a></p>
-        <p><a class="footer-link" href="./fletes-hurlingham-villa-tesei.html">Ver fletes en Hurlingham y Villa Tesei</a></p>
-        <p>© <span id="year"></span> - Mudanzas y fletes en Villa Tesei</p>
-      </div>
-      <div class="footer-decorations">
-        <div class="footer-line"></div>
+        <div class="legal">&copy; <span id="year"></span> Mudanzas Tesei &mdash; Mudanzas y fletes en Villa Tesei</div>
       </div>
     </footer>
 
