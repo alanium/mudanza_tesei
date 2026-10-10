@@ -102,3 +102,81 @@ if (quoteForm) {
     window.open(whatsappUrl, "_blank", "noopener");
   });
 }
+
+/* --------------------------------------------------------------------------
+   Movimiento: titular del hero, aparicion al llegar a cada pagina, botones
+   magneticos y parallax. Solo corre si <html class="motion"> (no hay
+   "reducir movimiento"). El scroll clavado es CSS puro (scroll-snap).
+   -------------------------------------------------------------------------- */
+(function () {
+  const root = document.documentElement;
+  if (!root.classList.contains("motion")) return;
+
+  /* 1. Titular del hero: una palabra por vez, con mascara */
+  const h1 = document.querySelector(".hero h1");
+  if (h1 && !h1.classList.contains("split")) {
+    const text = h1.textContent.trim();
+    h1.setAttribute("aria-label", text);
+    h1.textContent = "";
+    text.split(/\s+/).forEach((word, i, all) => {
+      const mask = document.createElement("span");
+      mask.className = "w";
+      mask.setAttribute("aria-hidden", "true");
+      const inner = document.createElement("span");
+      inner.style.setProperty("--i", i);
+      inner.textContent = word;
+      mask.appendChild(inner);
+      h1.appendChild(mask);
+      if (i < all.length - 1) h1.appendChild(document.createTextNode(" "));
+    });
+    h1.classList.add("split");
+  }
+
+  /* 2. Aparicion al llegar a cada pagina */
+  const reveal = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("in");
+        reveal.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -5% 0px" }
+  );
+  document.querySelectorAll("[data-reveal]").forEach((el) => reveal.observe(el));
+
+  /* 3. Botones magneticos (solo con mouse) */
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.querySelectorAll(".btn-primary, .nav .cta").forEach((btn) => {
+      btn.addEventListener("pointermove", (event) => {
+        const r = btn.getBoundingClientRect();
+        const x = (event.clientX - (r.left + r.width / 2)) * 0.22;
+        const y = (event.clientY - (r.top + r.height / 2)) * 0.3;
+        btn.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+      });
+      btn.addEventListener("pointerleave", () => {
+        btn.style.transform = "";
+      });
+    });
+  }
+
+  /* 4. Parallax suave de la foto del hero */
+  const heroBlock = document.querySelector(".hero-block");
+  if (heroBlock) {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const p = Math.min(1, Math.max(0, window.scrollY / window.innerHeight));
+      heroBlock.style.setProperty("--hero-p", p.toFixed(3));
+    };
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(update);
+      },
+      { passive: true }
+    );
+  }
+})();

@@ -138,6 +138,12 @@
         ]
       }
     </script>
+    <script>
+      /* animaciones y scroll clavado solo si la persona no pidio reducir el movimiento */
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("motion");
+      }
+    </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -190,12 +196,12 @@
 
       <section id="servicios">
         <div class="wrap">
-          <div class="head">
+          <div class="head" data-reveal>
             <h2>Que hacemos</h2>
             <p>Tres formas de resolverlo, segun lo que necesites mover.</p>
           </div>
           <div class="svc-list">
-            <a class="svc" href="#contacto">
+            <a class="svc" data-reveal style="--d:0s" href="#contacto">
               <span class="svc-num">01</span>
               <div>
                 <h3>Mudanzas particulares</h3>
@@ -203,7 +209,7 @@
               </div>
               <span class="svc-go">Solicitar &rarr;</span>
             </a>
-            <a class="svc" href="#contacto">
+            <a class="svc" data-reveal style="--d:.1s" href="#contacto">
               <span class="svc-num">02</span>
               <div>
                 <h3>Fletes programados</h3>
@@ -211,7 +217,7 @@
               </div>
               <span class="svc-go">Solicitar &rarr;</span>
             </a>
-            <a class="svc" href="https://wa.me/5491128233925" target="_blank" rel="noopener noreferrer">
+            <a class="svc" data-reveal style="--d:.2s" href="https://wa.me/5491128233925" target="_blank" rel="noopener noreferrer">
               <span class="svc-num">03</span>
               <div>
                 <h3>Cotizacion por WhatsApp</h3>
@@ -225,12 +231,12 @@
 
       <section class="alt" id="flota">
         <div class="wrap">
-          <div class="head">
+          <div class="head" data-reveal>
             <h2>Nuestra flota</h2>
             <p>Tres unidades propias. Elegimos la que corresponde segun el volumen y el acceso.</p>
           </div>
           <div class="fleet">
-            <article class="unit">
+            <article class="unit" data-reveal style="--d:0s">
               <div class="unit-photo">
                 <img src="./assets/image1.png" alt="Camion de mudanzas" loading="lazy" width="600" height="350" decoding="async" />
               </div>
@@ -244,7 +250,7 @@
                 </dl>
               </div>
             </article>
-            <article class="unit">
+            <article class="unit" data-reveal style="--d:.1s">
               <div class="unit-photo">
                 <img src="./assets/image2.png" alt="Furgoneta de carga" loading="lazy" width="600" height="350" decoding="async" />
               </div>
@@ -258,7 +264,7 @@
                 </dl>
               </div>
             </article>
-            <article class="unit">
+            <article class="unit" data-reveal style="--d:.2s">
               <div class="unit-photo">
                 <img src="./assets/image3.png" alt="Camion mediano" loading="lazy" width="600" height="350" decoding="async" />
               </div>
@@ -278,12 +284,12 @@
 
       <section id="servicios-complementarios">
         <div class="wrap">
-          <div class="head">
+          <div class="head" data-reveal>
             <h2>Servicios complementarios</h2>
             <p>Se suman a la mudanza si los necesitas. Se cotizan aparte.</p>
           </div>
 
-          <div class="row">
+          <div class="row" data-reveal>
             <div>
               <h3>Embalaje profesional</h3>
               <p>Envolvemos y protegemos cada pieza con materiales resistentes y un metodo ordenado, para reducir golpes, rayones y roturas durante el traslado.</p>
@@ -294,7 +300,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" data-reveal>
             <div>
               <h3>Armado y desarmado de muebles</h3>
               <p>Desmontamos, etiquetamos y volvemos a montar los muebles clave, para que puedas instalarte rapido sin perder el dia resolviendo tornillos.</p>
@@ -305,7 +311,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" data-reveal>
             <div>
               <h3>Logistica coordinada y fletes compartidos</h3>
               <p>Armamos recorridos eficientes y opciones compartidas cuando conviene, para bajar el costo sin resignar cuidado en la carga.</p>
@@ -321,18 +327,18 @@
       <section class="alt" id="zona">
         <div class="wrap info">
           <div>
-            <div class="head" style="margin-bottom:0">
+            <div class="head" data-reveal style="margin-bottom:0">
               <h2>Horarios y zona</h2>
               <p>Trabajamos todos los dias con coordinacion previa.</p>
             </div>
-            <div class="hours">
+            <div class="hours" data-reveal style="--d:.1s">
               <div><strong>Lunes a viernes</strong><span>06:00 &ndash; 18:00</span></div>
               <div><strong>Sabados</strong><span>06:00 &ndash; 18:00</span></div>
               <div><strong>Domingos</strong><span>06:00 &ndash; 18:00</span></div>
               <div><strong>Base</strong><span>Villa Tesei, Buenos Aires</span></div>
             </div>
           </div>
-          <div class="map">
+          <div class="map" data-reveal style="--d:.15s">
             <iframe
               title="Ubicacion de Mudanzas Tesei"
               src="https://www.google.com/maps?q=Villa+Tesei,+Buenos+Aires&output=embed"
@@ -345,12 +351,12 @@
 
       <section id="contacto">
         <div class="wrap">
-          <div class="head">
+          <div class="head" data-reveal>
             <h2>Pedinos una cotizacion</h2>
             <p>Un minuto de tu tiempo. Te respondemos por WhatsApp.</p>
           </div>
           <div class="contact">
-            <form id="quoteForm">
+            <form id="quoteForm" data-reveal>
               <div class="frow">
                 <div>
                   <label for="name">Nombre completo *</label>
@@ -381,7 +387,7 @@
               </div>
             </form>
 
-            <aside class="side">
+            <aside class="side" data-reveal style="--d:.12s">
               <h3>O escribinos directo</h3>
               <dl>
                 <div><dt>WhatsApp</dt><dd>11-2823-3925</dd></div>
@@ -396,8 +402,8 @@
 
       <section class="alt" id="faq">
         <div class="wrap">
-          <div class="head"><h2>Preguntas frecuentes</h2></div>
-          <div class="faq">
+          <div class="head" data-reveal><h2>Preguntas frecuentes</h2></div>
+          <div class="faq" data-reveal style="--d:.1s">
             <details open>
               <summary>&iquest;Que datos necesitan para cotizar?</summary>
               <p>Origen, destino, fecha aproximada y una breve descripcion de lo que hay que trasladar. Con eso te respondemos rapido.</p>
